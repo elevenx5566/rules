@@ -129,6 +129,7 @@ proxy-groups:
   - {name: 🍀 Google, type: select, proxies: [🚀 默认节点组,♻️ 自动选择节点组,🔯 香港故转节点组,🔯 台湾故转节点组,🔯 韩国故转节点组,🔯 日本故转节点组,🔯 新加坡故转节点组,🇭🇰 香港节点组,🇹🇼 台湾节点组,🇰🇷 韩国节点组,🇯🇵 日本节点组,🇸🇬 新加坡节点组,🇺🇲 美国节点组,🌐 其他地区节点组,🛩️ 高速节点组,🕊️ 便宜节点组,🍃 香港负载均衡节点组,🍃 台湾负载均衡节点组,🍃 韩国负载均衡节点组,🍃 日本负载均衡节点组,🍃 新加坡负载均衡节点组,🐸 手动切换节点组,🔏 私有节点组,🗼 国外家宽节点组, 直连]}
   - {name: 🤖 国外AI, type: select, proxies: [🚀 默认节点组,🔏 私有节点组,🗼 国外家宽节点组,♻️ 自动选择节点组,🔯 香港故转节点组,🔯 台湾故转节点组,🔯 韩国故转节点组,🔯 日本故转节点组,🔯 新加坡故转节点组,🇭🇰 香港节点组,🇹🇼 台湾节点组,🇰🇷 韩国节点组,🇯🇵 日本节点组,🇸🇬 新加坡节点组,🇺🇲 美国节点组,🌐 其他地区节点组,🛩️ 高速节点组,🕊️ 便宜节点组,🍃 香港负载均衡节点组,🍃 台湾负载均衡节点组,🍃 韩国负载均衡节点组,🍃 日本负载均衡节点组,🍃 新加坡负载均衡节点组,🐸 手动切换节点组, 直连]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [🚀 默认节点组,♻️ 自动选择节点组,🔯 香港故转节点组,🔯 台湾故转节点组,🔯 韩国故转节点组,🔯 日本故转节点组,🔯 新加坡故转节点组,🇭🇰 香港节点组,🇹🇼 台湾节点组,🇰🇷 韩国节点组,🇯🇵 日本节点组,🇸🇬 新加坡节点组,🇺🇲 美国节点组,🌐 其他地区节点组,🛩️ 高速节点组,🕊️ 便宜节点组,🍃 香港负载均衡节点组,🍃 台湾负载均衡节点组,🍃 韩国负载均衡节点组,🍃 日本负载均衡节点组,🍃 新加坡负载均衡节点组,🐸 手动切换节点组,🔏 私有节点组,🗼 国外家宽节点组, 直连]}
+  - {name: 🐳 Docker, type: select, proxies: [🚀 默认节点组,♻️ 自动选择节点组,🔯 香港故转节点组,🔯 台湾故转节点组,🔯 韩国故转节点组,🔯 日本故转节点组,🔯 新加坡故转节点组,🇭🇰 香港节点组,🇹🇼 台湾节点组,🇰🇷 韩国节点组,🇯🇵 日本节点组,🇸🇬 新加坡节点组,🇺🇲 美国节点组,🌐 其他地区节点组,🛩️ 高速节点组,🕊️ 便宜节点组,🍃 香港负载均衡节点组,🍃 台湾负载均衡节点组,🍃 韩国负载均衡节点组,🍃 日本负载均衡节点组,🍃 新加坡负载均衡节点组,🐸 手动切换节点组,🔏 私有节点组,🗼 国外家宽节点组, 直连]}
   - {name: 🐬 OneDrive, type: select, proxies: [直连,🚀 默认节点组,♻️ 自动选择节点组,🔯 香港故转节点组,🔯 台湾故转节点组,🔯 韩国故转节点组,🔯 日本故转节点组,🔯 新加坡故转节点组,🇭🇰 香港节点组,🇹🇼 台湾节点组,🇰🇷 韩国节点组,🇯🇵 日本节点组,🇸🇬 新加坡节点组,🇺🇲 美国节点组,🌐 其他地区节点组,🛩️ 高速节点组,🕊️ 便宜节点组,🍃 香港负载均衡节点组,🍃 台湾负载均衡节点组,🍃 韩国负载均衡节点组,🍃 日本负载均衡节点组,🍃 新加坡负载均衡节点组,🐸 手动切换节点组,🔏 私有节点组,🗼 国外家宽节点组]}
   - {name: 🪟 Microsoft, type: select, proxies: [直连,🚀 默认节点组,♻️ 自动选择节点组,🔯 香港故转节点组,🔯 台湾故转节点组,🔯 韩国故转节点组,🔯 日本故转节点组,🔯 新加坡故转节点组,🇭🇰 香港节点组,🇹🇼 台湾节点组,🇰🇷 韩国节点组,🇯🇵 日本节点组,🇸🇬 新加坡节点组,🇺🇲 美国节点组,🌐 其他地区节点组,🛩️ 高速节点组,🕊️ 便宜节点组,🍃 香港负载均衡节点组,🍃 台湾负载均衡节点组,🍃 韩国负载均衡节点组,🍃 日本负载均衡节点组,🍃 新加坡负载均衡节点组,🐸 手动切换节点组,🔏 私有节点组,🗼 国外家宽节点组]}
   - {name: 🎵 TikTok, type: select, proxies: [🚀 默认节点组,♻️ 自动选择节点组,🔯 香港故转节点组,🔯 台湾故转节点组,🔯 韩国故转节点组,🔯 日本故转节点组,🔯 新加坡故转节点组,🇭🇰 香港节点组,🇹🇼 台湾节点组,🇰🇷 韩国节点组,🇯🇵 日本节点组,🇸🇬 新加坡节点组,🇺🇲 美国节点组,🌐 其他地区节点组,🛩️ 高速节点组,🕊️ 便宜节点组,🍃 香港负载均衡节点组,🍃 台湾负载均衡节点组,🍃 韩国负载均衡节点组,🍃 日本负载均衡节点组,🍃 新加坡负载均衡节点组,🐸 手动切换节点组,🔏 私有节点组,🗼 国外家宽节点组, 直连]}
@@ -176,6 +177,7 @@ rules:
   - RULE-SET,apple_domain,🍎 Apple
   - RULE-SET,ai,🤖 国外AI
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
+  - RULE-SET,docker_domain,🐳 Docker
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,onedrive_domain,🐬 OneDrive
@@ -211,6 +213,7 @@ rule-providers:
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
   github_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
+  docker_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/docker.mrs"}
   telegram_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   netflix_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
   paypal_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
