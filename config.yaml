@@ -169,11 +169,12 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - RULE-SET,pt_domain,🌐 PT站点
-  - RULE-SET,proxylite,🗺️ 代理
   - RULE-SET,direct_domain,🎯 直连
-  - RULE-SET,private_domain,🎯 直连
+  - RULE-SET,proxylite,🗺️ 代理
+  - RULE-SET,pt_domain,🌐 PT站点
   - RULE-SET,tracker_domain,🎯 直连
+  - RULE-SET,private_domain,🎯 直连
+  - RULE-SET,cn_domain,🎯 直连
   - RULE-SET,apple_domain,🍎 Apple
   - RULE-SET,ai,🤖 国外AI
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
@@ -189,7 +190,6 @@ rules:
   - RULE-SET,paypal_domain,💶 PayPal
   - RULE-SET,gfw_domain,🚀 默认节点组
   - RULE-SET,geolocation-!cn,🚀 默认节点组
-  - RULE-SET,cn_domain,🎯 直连
   - RULE-SET,google_ip,🍀 Google,no-resolve
   - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
   - RULE-SET,telegram_ip,📲 Telegram,no-resolve
