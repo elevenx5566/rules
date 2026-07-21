@@ -13,3 +13,5 @@ IP-CIDR,103.115.43.2/32,no-resolve
 DOMAIN,surrit.com
 DOMAIN,edge-hls.growcdnssedge.com
 DOMAIN,s.uuidksinc.net
+
+DOMAIN,movie-pilot.org
