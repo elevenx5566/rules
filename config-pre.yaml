@@ -17,7 +17,7 @@ proxies:
   - name: 直连
     type: direct
   - name: "ss1"
-    dialer-proxy: 🚌 家宽加速
+    dialer-proxy: 🚌 家宽加速中转节点
   
 # 全局配置 
 port: 7890
@@ -126,8 +126,7 @@ proxy-groups:
   - {name: 🔯 故障转移节点组, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "^(?!.*(cn|🇨🇳|远程|直连|中国)).*$" }
   - {name: 🚌 机场共享点组, type: select, include-all: true, filter: "^(?!.*(私有|个人|私人|自建|家宽|远程|直连)).*$"}
   - {name: 🔏 家宽独享节点组, type: select, include-all: true, filter: "^.*(私有|个人|私人|自建|家宽).*$"}
-  - {name: 🚌 家宽加速, type: select, include-all: true, filter: "^(?!.*(私有|个人|私人|自建|家宽|远程)).*$"}
-、
+  - {name: 🚌 家宽加速中转节点, type: select, include-all: true, filter: "^(?!.*(私有|个人|私人|自建|家宽|远程)).*$"}
  
 
 # 规则匹配
