@@ -105,8 +105,8 @@ dns:
 proxy-groups:
   - {name: 🗺️ 代理, type: select, proxies: [🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🔏 家宽独享节点组,🚌 机场共享点组,直连]}
   - {name: 🎯 直连, type: select, proxies: [直连,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🔏 家宽独享节点组,🚌 机场共享点组]}
-  - {name: 🎃 国外AI, type: select, proxies: [🔏 家宽独享节点组,直连,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🚌 机场共享点组]}
-  - {name: 👛 PayPal, type: select, proxies: [直连,🔏 家宽独享节点组,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🚌 机场共享点组]}
+  - {name: 🤖 国外AI, type: select, proxies: [🔏 家宽独享节点组,直连,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🚌 机场共享点组]}
+  - {name: 💶 PayPal, type: select, proxies: [直连,🔏 家宽独享节点组,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🚌 机场共享点组]}
   - {name: 🍎 Apple苹果, type: select,include-all: true}
   - {name: 🐟 漏网之鱼, type: select, proxies: [直连,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🔏 家宽独享节点组,🚌 机场共享点组]}
 #节点组
@@ -120,14 +120,16 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - RULE-SET,private_domain,直连
   - RULE-SET,direct_domain,🎯 直连
-  - RULE-SET,cn_ip,🎯 直连
   - RULE-SET,proxylite,🗺️ 代理
-  - RULE-SET,apple_domain,🍎 Apple苹果
-  - RULE-SET,ai,🎃 国外AI
-  - RULE-SET,paypal_domain,👛 PayPal
+  - RULE-SET,pt_domain,🎯 直连
+  - RULE-SET,tracker_domain,🎯 直连
+  - RULE-SET,private_domain,🎯 直连
+  - RULE-SET,cn_domain,🎯 直连
+  - RULE-SET,apple_domain,🍎 Apple
+  - RULE-SET,ai,🤖 国外AI
   - RULE-SET,github_domain,🗺️ 代理
+  - RULE-SET,docker_domain,🗺️ 代理
   - RULE-SET,youtube_domain,🗺️ 代理
   - RULE-SET,google_domain,🗺️ 代理
   - RULE-SET,onedrive_domain,🎯 直连
@@ -136,12 +138,13 @@ rules:
   - RULE-SET,speedtest_domain,🎯 直连
   - RULE-SET,telegram_domain,🗺️ 代理
   - RULE-SET,netflix_domain,🗺️ 代理
+  - RULE-SET,paypal_domain,💶 PayPal
   - RULE-SET,gfw_domain,🗺️ 代理
   - RULE-SET,geolocation-!cn,🗺️ 代理
-  - RULE-SET,cn_domain,🎯 直连
   - RULE-SET,google_ip,🗺️ 代理,no-resolve
   - RULE-SET,netflix_ip,🗺️ 代理,no-resolve
   - RULE-SET,telegram_ip,🗺️ 代理,no-resolve
+  - RULE-SET,cn_ip,🎯 直连
   - MATCH,🐟 漏网之鱼
 
 # 规则集
@@ -163,6 +166,7 @@ rule-providers:
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
   github_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
+  docker_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/docker.mrs"}
   telegram_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   netflix_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
   paypal_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
