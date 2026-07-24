@@ -107,7 +107,7 @@ proxy-groups:
   - {name: 🎯 直连, type: select, proxies: [直连,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🔏 家宽独享节点组,🚌 机场共享点组]}
   - {name: 🤖 国外AI, type: select, proxies: [🔏 家宽独享节点组,直连,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🚌 机场共享点组]}
   - {name: 💶 PayPal, type: select, proxies: [直连,🔏 家宽独享节点组,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🚌 机场共享点组]}
-  - {name: 🍎 Apple苹果, type: select,include-all: true}
+  - {name: 🍎 Apple, type: select,include-all: true}
   - {name: 🐟 漏网之鱼, type: select, proxies: [直连,🔯 故障转移节点组,♻️ 自动选择节点组,🚀 手动选择节点组,🔏 家宽独享节点组,🚌 机场共享点组]}
 #节点组
   - {name: 🚀 手动选择节点组, type: select, include-all: true, tolerance: 20, interval: 300, filter: "^(?!.*(远程)).*$"}
