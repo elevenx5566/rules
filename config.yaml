@@ -72,6 +72,8 @@ sniffer:
     - "+.v2ex.com"
   skip-domain:
     - "+.baidu.com"
+    - rule-set:pt_domain
+    - rule-set:tracker_domain
 
 # 入站  
 tun:
