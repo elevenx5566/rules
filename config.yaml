@@ -26,6 +26,8 @@ proxy-providers:
 proxies:
   - name: 直连
     type: direct
+  - name: 拒绝
+    type: reject
   
 # 全局配置 
 port: 7890
@@ -127,6 +129,7 @@ proxy-groups:
   - {name: 🗺️ 代理, type: select, proxies: [♻️🌐 自动选择节点组,🔄🇭🇰 香港故转节点组,🔄🇹🇼 台湾故转节点组,🔄🇰🇷 韩国故转节点组,🔄🇯🇵 日本故转节点组,🔄🇸🇬 新加坡故转节点组,🔄🇺🇲 美国故转节点组,✅️🇭🇰 香港节点组,✅️🇹🇼 台湾节点组,✅️🇰🇷 韩国节点组,✅️🇯🇵 日本节点组,✅️🇸🇬 新加坡节点组,✅️🇺🇲 美国节点组,✅️🌐 其他地区节点组,✅️🛩️ 高速节点组,✅️🕊️ 便宜节点组,⚖️🇭🇰 香港负载均衡节点组,⚖️🇹🇼 台湾负载均衡节点组,⚖️🇰🇷 韩国负载均衡节点组,⚖️🇯🇵 日本负载均衡节点组,⚖️🇸🇬 新加坡负载均衡节点组,⚖️🇺🇲 美国负载均衡节点组,✅️🐸 手动切换节点组,✅️🔏 私有节点组,🔄🔏 私有故转节点组,✅️🧱 国外家宽节点组, 直连]}
   - {name: 🎯 直连, type: select, proxies: [直连, 🗺️ 代理,✅️🔏 私有节点组,🔄🔏 私有故转节点组,✅️🧱 国外家宽节点组,✅️🇭🇰 香港节点组,✅️🇹🇼 台湾节点组,✅️🇰🇷 韩国节点组,✅️🇯🇵 日本节点组,✅️🇸🇬 新加坡节点组,✅️🇺🇲 美国节点组,✅️🌐 其他地区节点组,✅️🐸 手动切换节点组]}
   - {name: 💾 PT站点, type: select, proxies: [直连,✅️🧱 国外家宽节点组,✅️🔏 私有节点组,🔄🔏 私有故转节点组,🗺️ 代理,🔄🇭🇰 香港故转节点组,🔄🇯🇵 日本故转节点组,🔄🇸🇬 新加坡故转节点组,🔄🇺🇲 美国故转节点组,✅️🇭🇰 香港节点组,✅️🇯🇵 日本节点组,✅️🇸🇬 新加坡节点组,✅️🇺🇲 美国节点组,✅️🌐 其他地区节点组,✅️🛩️ 高速节点组,✅️🕊️ 便宜节点组,♻️🌐 自动选择节点组,✅️🐸 手动切换节点组]}
+  - {name: 🚫 广告, type: select, proxies: [拒绝,直连,✅️🐸 手动切换节点组]}
   - {name: 📹 YouTube, type: select, proxies: [🗺️ 代理,♻️🌐 自动选择节点组,🔄🇭🇰 香港故转节点组,🔄🇹🇼 台湾故转节点组,🔄🇰🇷 韩国故转节点组,🔄🇯🇵 日本故转节点组,🔄🇸🇬 新加坡故转节点组,🔄🇺🇲 美国故转节点组,✅️🇭🇰 香港节点组,✅️🇹🇼 台湾节点组,✅️🇰🇷 韩国节点组,✅️🇯🇵 日本节点组,✅️🇸🇬 新加坡节点组,✅️🇺🇲 美国节点组,✅️🌐 其他地区节点组,✅️🛩️ 高速节点组,✅️🕊️ 便宜节点组,⚖️🇭🇰 香港负载均衡节点组,⚖️🇹🇼 台湾负载均衡节点组,⚖️🇰🇷 韩国负载均衡节点组,⚖️🇯🇵 日本负载均衡节点组,⚖️🇸🇬 新加坡负载均衡节点组,⚖️🇺🇲 美国负载均衡节点组,✅️🐸 手动切换节点组,✅️🔏 私有节点组,🔄🔏 私有故转节点组,✅️🧱 国外家宽节点组, 直连]}
   - {name: 🍀 Google, type: select, proxies: [🗺️ 代理,♻️🌐 自动选择节点组,🔄🇭🇰 香港故转节点组,🔄🇹🇼 台湾故转节点组,🔄🇰🇷 韩国故转节点组,🔄🇯🇵 日本故转节点组,🔄🇸🇬 新加坡故转节点组,🔄🇺🇲 美国故转节点组,✅️🇭🇰 香港节点组,✅️🇹🇼 台湾节点组,✅️🇰🇷 韩国节点组,✅️🇯🇵 日本节点组,✅️🇸🇬 新加坡节点组,✅️🇺🇲 美国节点组,✅️🌐 其他地区节点组,✅️🛩️ 高速节点组,✅️🕊️ 便宜节点组,⚖️🇭🇰 香港负载均衡节点组,⚖️🇹🇼 台湾负载均衡节点组,⚖️🇰🇷 韩国负载均衡节点组,⚖️🇯🇵 日本负载均衡节点组,⚖️🇸🇬 新加坡负载均衡节点组,⚖️🇺🇲 美国负载均衡节点组,✅️🐸 手动切换节点组,✅️🔏 私有节点组,🔄🔏 私有故转节点组,✅️🧱 国外家宽节点组, 直连]}
   - {name: 🤖 国外AI, type: select, proxies: [🗺️ 代理,✅️🔏 私有节点组,🔄🔏 私有故转节点组,✅️🧱 国外家宽节点组,♻️🌐 自动选择节点组,🔄🇭🇰 香港故转节点组,🔄🇹🇼 台湾故转节点组,🔄🇰🇷 韩国故转节点组,🔄🇯🇵 日本故转节点组,🔄🇸🇬 新加坡故转节点组,🔄🇺🇲 美国故转节点组,✅️🇭🇰 香港节点组,✅️🇹🇼 台湾节点组,✅️🇰🇷 韩国节点组,✅️🇯🇵 日本节点组,✅️🇸🇬 新加坡节点组,✅️🇺🇲 美国节点组,✅️🌐 其他地区节点组,✅️🛩️ 高速节点组,✅️🕊️ 便宜节点组,⚖️🇭🇰 香港负载均衡节点组,⚖️🇹🇼 台湾负载均衡节点组,⚖️🇰🇷 韩国负载均衡节点组,⚖️🇯🇵 日本负载均衡节点组,⚖️🇸🇬 新加坡负载均衡节点组,✅️🐸 手动切换节点组, 直连]}
@@ -172,10 +175,13 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - RULE-SET,tracker_domain,🎯 直连
-  - RULE-SET,pt_domain,💾 PT站点
+  #自定义规则
   - RULE-SET,proxylite,🗺️ 代理
   - RULE-SET,direct_domain,🎯 直连
+  - RULE-SET,tracker_domain,🎯 直连
+  - RULE-SET,pt_domain,💾 PT站点
+  #公共规则
+  - RULE-SET,ad_domain,🚫 广告
   - RULE-SET,private_domain,🎯 直连
   - RULE-SET,cn_domain,🎯 直连
   - RULE-SET,apple_domain,🍎 Apple
@@ -228,6 +234,7 @@ rule-providers:
   gfw_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"}
   geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
   cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
+  ad_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"}
   #ip组
   cn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"}
   google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
