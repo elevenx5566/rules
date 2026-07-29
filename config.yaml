@@ -145,7 +145,7 @@ proxy-groups:
   - {name: ✅️🐸 手动切换节点组, type: select, include-all: true, filter: "^(?!.*(救援|应急|远程)).*$"}
   - {name: ✅️🧱 国外家宽节点组, type: select, include-all: true, filter: "^(?!.*中国)(?=.*(家宽|家庭)).*$"}
   - {name: ✅️🔏 私有节点组, type: select, include-all: true, filter: "^.*(私有|个人|私人|自建|vps).*$"}
-  - {name: 🔄🔏 私有故转节点组, type: select, include-all: true, filter: "^.*(私有|个人|私人|自建|vps).*$"}
+  - {name: 🔄🔏 私有故转节点组, type: fallback, include-all: true, tolerance: 20, interval: 300, include-all: true, filter: "^.*(私有|个人|私人|自建|vps).*$"}
   - {name: ✅️🛩️ 高速节点组, type: select, include-all: true, filter: "^.*(?=.*(香港|hk|HK|日本|JP|jp|台湾|TW|tw|韩国|首尔|kr|KR|SG|新加坡|专线))(?!.*0\\.[1-5]).*$"}
   - {name: ✅️🕊️ 便宜节点组, type: select, include-all: true, filter: "^.*(0\\.[1-5]).*$"}
   - {name: ✅️🇭🇰 香港节点组, type: select, include-all: true, filter: "^.*(?!.*(救援|应急|远程))(香港|HK|Hong Kong|🇭🇰|HongKong).*$"}
