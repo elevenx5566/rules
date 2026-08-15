@@ -104,6 +104,7 @@ DOMAIN,www.qingwapt.com
 DOMAIN,carpt.net
 ##学校
 DOMAIN,pt.btschool.club
+DOMAIN-SUFFIX,btschool.net
 
 #########外站##################
 ##digitalcore
