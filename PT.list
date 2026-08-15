@@ -1,23 +1,15 @@
 ########WEB,不包含tracker######
 ##馒头co
-DOMAIN,kp.m-team.co
-DOMAIN,api.m-team.co
-DOMAIN,h5.m-team.co
+DOMAIN-SUFFIX,m-team.co
 ##馒头io
-DOMAIN,kp.m-team.io
-DOMAIN,api.m-team.io
-DOMAIN,h5.m-team.io
-DOMAIN,rss.m-team.io
+DOMAIN-SUFFIX,m-team.io
 ##馒头cc
-DOMAIN,kp.m-team.cc
-DOMAIN,h5.m-team.cc
-DOMAIN,rss.m-team.cc
+DOMAIN-SUFFIX,m-team.cc
 #种子域名
 DOMAIN,fr1.halomt.com
 DOMAIN,bt1.manfuz.co
 DOMAIN,hs1.holysalt.org
-DOMAIN-SUFFIX,m-team.cc
-DOMAIN-SUFFIX,m-team.io
+
 
 ##SKY
 DOMAIN,hdsky.me
