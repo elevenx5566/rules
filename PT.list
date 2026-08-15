@@ -37,9 +37,8 @@ DOMAIN,hdhome.org
 ##你堡
 DOMAIN,ubits.club
 ##杜比
-DOMAIN,www.hddolby.com
 DOMAIN,hddolby.com
-DOMAIN,api.hddolby.com
+DOMAIN-SUFFIX,hddolby.com
 ##织梦
 DOMAIN,zmpt.cc
 ##U2
@@ -47,10 +46,8 @@ DOMAIN,u2.dmhy.org
 ##猪
 DOMAIN,piggo.me
 ##末日
-DOMAIN,www.agsvpt.com
-DOMAIN,new.agsvpt.com
-DOMAIN,bbs.agsvpt.cn
-DOMAIN,pt.agsvpt.cn
+DOMAIN-SUFFIX,agsvpt.com
+DOMAIN-SUFFIX,agsvpt.cn
 ######################
 ##肉丝
 DOMAIN,rousi.pro
@@ -67,7 +64,7 @@ DOMAIN,pt.xingyungept.org
 ##GTK
 DOMAIN,pt.gtkpw.xyz
 ##ptzone
-DOMAIN,www.ptzone.xyz
+DOMAIN-SUFFIX.ptzone.xyz
 DOMAIN,ptzone.xyz
 ##吐鲁番
 DOMAIN,pt.eastgame.org
