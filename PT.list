@@ -13,15 +13,11 @@ DOMAIN,kp.m-team.cc
 DOMAIN,h5.m-team.cc
 DOMAIN,rss.m-team.cc
 #种子域名
-DOMAIN,api.m-team.cc
-DOMAIN,api1.m-team.cc
-DOMAIN,api2.m-team.cc
 DOMAIN,fr1.halomt.com
 DOMAIN,bt1.manfuz.co
 DOMAIN,hs1.holysalt.org
 DOMAIN-SUFFIX,m-team.cc
 DOMAIN-SUFFIX,m-team.io
-DOMAIN,rss.m-team.cc
 
 ##SKY
 DOMAIN,hdsky.me
@@ -80,6 +76,7 @@ DOMAIN,pt.xingyungept.org
 DOMAIN,pt.gtkpw.xyz
 ##ptzone
 DOMAIN,www.ptzone.xyz
+DOMAIN,ptzone.xyz
 ##吐鲁番
 DOMAIN,pt.eastgame.org
 ##下水道
