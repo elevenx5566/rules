@@ -64,7 +64,7 @@ DOMAIN,pt.xingyungept.org
 ##GTK
 DOMAIN,pt.gtkpw.xyz
 ##ptzone
-DOMAIN-SUFFIX.ptzone.xyz
+DOMAIN-SUFFIX,ptzone.xyz
 DOMAIN,ptzone.xyz
 ##吐鲁番
 DOMAIN,pt.eastgame.org
