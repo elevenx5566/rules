@@ -53,3 +53,6 @@ DOMAIN,duyaoss.com
 DOMAIN-SUFFIX,duyaoss.com
 
 DOMAIN,ncdn1.sntp.uk
+
+DOMAIN,services.googleapis.cn
+DOMAIN-KEYWORD,google
