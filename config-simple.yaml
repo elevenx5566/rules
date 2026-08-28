@@ -60,9 +60,7 @@ sniffer:
     - "+.v2ex.com"
   skip-domain:
     - "+.baidu.com"
-    - rule-set:pt_domain
-    - rule-set:tracker_domain
-
+  
 # 入站  
 tun:
   enable: true
@@ -79,15 +77,20 @@ dns:
   listen: 0.0.0.0:1053
   ipv6: false
   respect-rules: true
+  prefer-h3: true
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - "rule-set:private_domain,cn_domain"
+    - "rule-set:private_domain"
+    - "rule-set:cn_domain"
+    - "rule-set:github_domain"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - "time.*.com"
     - "+.market.xiaomi.com"
+    
+  # 用于解析 nameserver，fallback 以及其他 DNS 服务器配置的，DNS 服务域名，只能使用纯 IP 地址，可使用加密 DNS
   default-nameserver:
     - https://223.5.5.5/dns-query
     - https://223.6.6.6/dns-query
@@ -97,10 +100,19 @@ dns:
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+    - https://doh.18bit.cn/dns-query
   nameserver:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.opendns.com/dns-query
+  fallback:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.opendns.com/dns-query
+  direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
- 
+    - https://doh.18bit.cn/dns-query
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。

@@ -74,8 +74,6 @@ sniffer:
     - "+.v2ex.com"
   skip-domain:
     - "+.baidu.com"
-    - rule-set:pt_domain
-    - rule-set:tracker_domain
 
 # 入站  
 tun:
@@ -98,7 +96,9 @@ dns:
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - "rule-set:private_domain,cn_domain"
+    - "rule-set:private_domain"
+    - "rule-set:cn_domain"
+    - "rule-set:github_domain"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - "time.*.com"
@@ -116,16 +116,14 @@ dns:
     - https://doh.pub/dns-query
     - https://doh.18bit.cn/dns-query
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - https://doh.18bit.cn/dns-query
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.opendns.com/dns-query
   fallback:
-    - https://8.8.4.4/dns-query
-    - https://8.8.8.8/dns-query
-    - https://1.1.1.1/dns-query
-    - https://1.0.0.1/dns-query
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.opendns.com/dns-query
   direct-nameserver:
-    - system
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
     - https://doh.18bit.cn/dns-query

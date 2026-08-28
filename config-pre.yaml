@@ -63,8 +63,6 @@ sniffer:
     - "+.v2ex.com"
   skip-domain:
     - "+.baidu.com"
-    - rule-set:pt_domain
-    - rule-set:tracker_domain
 
 # 入站  
 tun:
@@ -82,16 +80,19 @@ dns:
   listen: 0.0.0.0:1053
   ipv6: false
   respect-rules: true
-  prefer-h3: false
+  prefer-h3: true
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - "rule-set:private_domain,cn_domain"
+    - "rule-set:private_domain"
+    - "rule-set:cn_domain"
+    - "rule-set:github_domain"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - "time.*.com"
     - "+.market.xiaomi.com"
+    
   # 用于解析 nameserver，fallback 以及其他 DNS 服务器配置的，DNS 服务域名，只能使用纯 IP 地址，可使用加密 DNS
   default-nameserver:
     - https://223.5.5.5/dns-query
@@ -100,21 +101,21 @@ dns:
     - https://1.12.12.12/dns-query
     - https://120.53.53.53/dns-query
   proxy-server-nameserver:
-    - https://223.5.5.5/dns-query
-    - https://223.6.6.6/dns-query
-    - https://119.29.29.29/dns-query
-    - https://1.12.12.12/dns-query
-    - https://120.53.53.53/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://doh.18bit.cn/dns-query
   nameserver:
-    - 1.1.1.1
-    - 8.8.4.4
-    - 8.8.8.8
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.opendns.com/dns-query
   fallback:
-    - 1.1.1.1
-    - 8.8.4.4
-    - 8.8.8.8
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.opendns.com/dns-query
   direct-nameserver:
-    - system
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://doh.18bit.cn/dns-query
     
  
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
