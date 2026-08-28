@@ -98,7 +98,6 @@ dns:
   fake-ip-filter:
     - "rule-set:private_domain"
     - "rule-set:cn_domain"
-    - "rule-set:github_domain"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - "time.*.com"
