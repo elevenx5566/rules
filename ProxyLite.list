@@ -61,3 +61,5 @@ DOMAIN,cloudflare-dns.com
 DOMAIN,doh.opendns.com
 
 DOMAIN,layeronecloud.com
+
+DOMAIN-SUFFIX,zdz.plus
