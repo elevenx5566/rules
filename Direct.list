@@ -23,3 +23,7 @@ IP-CIDR,120.53.53.53/32
 DOMAIN,dns.alidns.com
 DOMAIN,doh.pub
 DOMAIN,doh.18bit.cn
+
+DOMAIN,work.weixin.qq.com
+DOMAIN-SUFFIX,weixin.qq.com
+DOMAIN-SUFFIX,qq.com
