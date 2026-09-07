@@ -64,3 +64,7 @@ DOMAIN,doh.opendns.com
 DOMAIN,layeronecloud.com
 
 DOMAIN-SUFFIX,zdz.plus
+
+
+#测试
+DOMAIN-SUFFIX,030228.xyz
