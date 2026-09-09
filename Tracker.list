@@ -67,4 +67,3 @@ DOMAIN,tracker.agsvpt.cn
 ############
 ##通配
 DOMAIN-WILDCARD,tracker.*
-DOMAIN-WILDCARD,t.*
