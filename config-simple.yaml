@@ -70,6 +70,7 @@ tun:
   enable: true
   # system/gvisor/mixed
   stack: mixed
+  #DNS劫持如果使用转发器就禁用。不使用开启
   dns-hijack: ["any:53", "tcp://any:53"]
   auto-route: true
   auto-redirect: true
