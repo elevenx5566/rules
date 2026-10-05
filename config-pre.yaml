@@ -96,30 +96,54 @@ dns:
     - "+.msftncsi.com"
     - "time.*.com"
     - "+.market.xiaomi.com"
-    
-  # 用于解析 nameserver，fallback 以及其他 DNS 服务器配置的，DNS 服务域名，只能使用纯 IP 地址，可使用加密 DNS
   default-nameserver:
     - https://223.5.5.5/dns-query
     - https://223.6.6.6/dns-query
     - https://119.29.29.29/dns-query
     - https://1.12.12.12/dns-query
     - https://120.53.53.53/dns-query
+  #节点域名解析服务器。
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
     - https://doh.18bit.cn/dns-query
+
+  #第一优先级，域名匹配规则直连使用
+  direct-nameserver:
+    - system
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://doh.18bit.cn/dns-query
+  #第二优先级，指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
+  nameserver-policy:
+#    'rule-set:geolocation-!cn,gfw_domain':
+#      - https://dns.google/dns-query
+#      - https://cloudflare-dns.com/dns-query
+#      - https://doh.opendns.com/dns-query
+  #第三优先级
   nameserver:
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
     - https://doh.opendns.com/dns-query
+  #第四优先级
   fallback:
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
     - https://doh.opendns.com/dns-query
-  direct-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - https://doh.18bit.cn/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+      - 100.64.0.0/10
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
     
  
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
