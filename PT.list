@@ -17,6 +17,7 @@ DOMAIN,hdsky.me
 DOMAIN,totheglory.im
 ##不可说
 DOMAIN,springsunday.net
+DOMAIN-SUFFIX,hdcmct.org
 ##皇后
 DOMAIN,open.cd
 ##我堡
@@ -32,6 +33,7 @@ DOMAIN-SUFFIX,hhanclub.net
 DOMAIN,pt.keepfrds.com
 ##猫站
 DOMAIN,pterclub.net
+DOMAIN-SUFFIX,pterclub.net
 ##家园
 DOMAIN,hdhome.org
 ##你堡
@@ -39,6 +41,7 @@ DOMAIN,ubits.club
 ##杜比
 DOMAIN,hddolby.com
 DOMAIN-SUFFIX,hddolby.com
+DOMAIN-SUFFIX,orcinusorca.org
 ##织梦
 DOMAIN,zmpt.cc
 DOMAIN-SUFFIX,zmpt.cc
@@ -99,3 +102,4 @@ DOMAIN,digitalcore.club
 #图床
 DOMAIN,ptpimg.me
 DOMAIN,bt.whlwhl.top
+
