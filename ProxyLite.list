@@ -72,3 +72,7 @@ DOMAIN-SUFFIX,030228.xyz
 DOMAIN-SUFFIX,lrclib.net
 #番剧识别
 DOMAIN-SUFFIX,trace.moe
+
+DOMAIN-SUFFIX,acoustid.org
+DOMAIN-SUFFIX,anilist.co
+DOMAIN-SUFFIX,theaudiodb.com
