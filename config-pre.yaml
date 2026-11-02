@@ -106,14 +106,12 @@ dns:
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-    - https://doh.18bit.cn/dns-query
 
   #第一优先级，域名匹配规则直连使用
   direct-nameserver:
     - system
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-    - https://doh.18bit.cn/dns-query
   #第二优先级，指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
   nameserver-policy:
 #    'rule-set:geolocation-!cn,gfw_domain':
@@ -124,12 +122,10 @@ dns:
   nameserver:
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
-    - https://doh.opendns.com/dns-query
   #第四优先级
   fallback:
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
-    - https://doh.opendns.com/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
