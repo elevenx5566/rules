@@ -67,7 +67,7 @@ profile:
 # 因容易造成新手面板启动问题，我注释掉了，需要的自行开启
 external-controller: 0.0.0.0:9090
 #secret: ""
-external-ui: "/etc/nikki/run/ui"
+external-ui: "/etc/nikki/run/ui"  #nikiki使用。其他软件请注释
 external-ui-name: zashboard
 external-ui-url: "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 geox-url:
