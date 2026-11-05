@@ -111,7 +111,7 @@ sniffer:
     - "Mijia Cloud"
     - "+.push.apple.com"
   skip-dst-address:
-    - 179.254.94.47/32
+ 
     
 # DNS模块，核心流程1：fake-ip-filter存在→本地解析，fake-ip-filter不存在→使用远程解析
 #          核心流程2： TCP发送域名出站，UDP发送IP出站。所以UDP流量需要在本地解决IP准确性问题                        
