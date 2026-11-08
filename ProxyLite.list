@@ -4,11 +4,10 @@
 
 
 # 域名关键字匹配
-DOMAIN-KEYWORD,1e100
+
 
 # IP段匹配
-IP-CIDR,142.171.133.131/32,no-resolve
-IP-CIDR,103.115.43.2/32,no-resolve
+
 
 DOMAIN,surrit.com
 DOMAIN,edge-hls.growcdnssedge.com

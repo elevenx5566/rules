@@ -14,5 +14,5 @@ DOMAIN-SUFFIX,myip.ipip.net
 # 域名后缀匹配
 DOMAIN-SUFFIX,time.windows.com
 
-
+DOMAIN-SUFFIX,snssdk.com
 DOMAIN,gh-proxy.com
