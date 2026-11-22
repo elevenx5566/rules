@@ -163,14 +163,15 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - RULE-SET,tracker_domain,🎯 直连
-  - RULE-SET,pt_domain,💾 PT站点
   - RULE-SET,direct_domain,🎯 直连
   - RULE-SET,proxylite,🗺️ 代理
-  - RULE-SET,private_domain,🎯 直连
-  - RULE-SET,cn_domain,🎯 直连
+  - RULE-SET,tracker_domain,🎯 直连
+  - RULE-SET,pt_domain,💾 PT站点
+  - RULE-SET,paypal_domain,💶 PayPal
   - RULE-SET,apple_domain,🍎 Apple
   - RULE-SET,ai,🤖 国外AI
+  - RULE-SET,private_domain,🎯 直连
+  - RULE-SET,cn_domain,🎯 直连
   - RULE-SET,github_domain,🗺️ 代理
   - RULE-SET,docker_domain,🗺️ 代理
   - RULE-SET,youtube_domain,🗺️ 代理
@@ -181,7 +182,6 @@ rules:
   - RULE-SET,speedtest_domain,🎯 直连
   - RULE-SET,telegram_domain,🗺️ 代理
   - RULE-SET,netflix_domain,🗺️ 代理
-  - RULE-SET,paypal_domain,💶 PayPal
   - RULE-SET,gfw_domain,🗺️ 代理
   - RULE-SET,geolocation-!cn,🗺️ 代理
   - RULE-SET,google_ip,🗺️ 代理,no-resolve
