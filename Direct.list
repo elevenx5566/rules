@@ -16,3 +16,5 @@ DOMAIN-SUFFIX,time.windows.com
 
 DOMAIN-SUFFIX,snssdk.com
 DOMAIN-SUFFIX,gh-proxy.com
+
+AND,(IP-CIDR,23.27.48.187),(DST-PORT,22)
