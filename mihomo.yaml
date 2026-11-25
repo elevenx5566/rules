@@ -1,13 +1,11 @@
 rule-anchor:
   P: &P {type: http, interval: 0, health-check: {enable: true, url: 'https://www.gstatic.com/generate_204', interval: 300}, exclude-filter: "官网|剩余|流量|套餐|订阅|直连|到期时间|Expire Date|Traffic|ExpireDate", proxy: 直连}
   # 节点选择
-  G1: &G1 {type: select, proxies: [默认代理, 香港故转, 日本故转, 台湾故转, 狮城故转, 美国故转, 香港手动, 日本手动, 台湾手动, 狮城手动, 美国手动, 香港自动, 日本自动, 台湾自动, 狮城自动, 美国自动, 全部自动, 自建自动, 自建手动, 全部手动, 直连,拒绝]}
   S1: &S1 {type: select, proxies: [香港故转, 日本故转, 台湾故转, 狮城故转, 美国故转, 香港手动, 日本手动, 台湾手动, 狮城手动, 美国手动, 香港自动, 日本自动, 台湾自动, 狮城自动, 美国自动, 全部自动,自建自动, 自建手动, 全部手动, 直连,拒绝]}
-  S2: &S2 {type: select, proxies: [日本故转, 香港故转, 台湾故转, 狮城故转, 美国故转, 香港手动, 日本手动, 台湾手动, 狮城手动, 美国手动, 香港自动, 日本自动, 台湾自动, 狮城自动, 美国自动, 全部自动,自建自动, 自建手动, 全部手动, 直连,拒绝]}
-  S3: &S3 {type: select, proxies: [美国故转, 香港故转, 日本故转, 台湾故转, 狮城故转, 香港手动, 日本手动, 台湾手动, 狮城手动, 美国手动, 香港自动, 日本自动, 台湾自动, 狮城自动, 美国自动, 全部自动,自建自动, 自建手动, 全部手动, 直连,拒绝]}
+  S2: &S2 {type: select, proxies: [默认代理, 香港故转, 日本故转, 台湾故转, 狮城故转, 美国故转, 香港手动, 日本手动, 台湾手动, 狮城手动, 美国手动, 香港自动, 日本自动, 台湾自动, 狮城自动, 美国自动, 全部自动, 自建自动, 自建手动, 全部手动, 直连,拒绝]}
+  S3: &S3 {type: select, proxies: [直连,自建自动, 自建手动,美国故转, 香港故转, 日本故转, 台湾故转, 狮城故转, 香港手动, 日本手动, 台湾手动, 狮城手动, 美国手动, 香港自动, 日本自动, 台湾自动, 狮城自动, 美国自动, 全部自动, 全部手动,拒绝]}
+  S4: &S4 {type: select, proxies: [拒绝,直连,默认代理]}
   S5: &S5 {type: url-test, proxies: [直连, 拒绝], interval: 3600, lazy: true, url: "http://connect.rom.miui.com/generate_204"}
-  S6: &S6 {type: select, proxies: [直连,自建自动, 自建手动,美国故转, 香港故转, 日本故转, 台湾故转, 狮城故转, 香港手动, 日本手动, 台湾手动, 狮城手动, 美国手动, 香港自动, 日本自动, 台湾自动, 狮城自动, 美国自动, 全部自动, 全部手动,拒绝]}
-  S7: &S7 {type: select, proxies: [拒绝,直连,默认代理]}
   # 节点筛选
   HK: &HK "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"
   JP: &JP "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"
@@ -171,31 +169,33 @@ dns:
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
   #规则组
-  - {name: 默认代理, <<: *S1, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/select.png"}
-  - {name: PT站点, <<: *S6, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/pt.png"}
-  - {name: AI, <<: *S3, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/ai.png"}
-  - {name: YouTube, <<: *G1, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/youtube.png"}
-  - {name: Google, <<: *G1, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/google.png"}
-  - {name: GitHub, <<: *G1, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/github.png"}
-  - {name: Telegram, <<: *S3, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/telegram.png"}
-  - {name: TikTok, <<: *S3, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/douyin.png"}
-  - {name: NETFLIX, <<: *S3, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/netflix.png"}
-  - {name: Wallet, <<: *S3, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/wallet.png"}
-  - {name: Steam, <<: *S6, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/steam.png"}
-  - {name: Microsoft, <<: *S6, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/microsoft.png"}
-  - {name: OneDrive, <<: *S6, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/onedrive.png"}
-  - {name: Apple, <<: *S6, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/apple.png"}
+  - {name: 默认代理, <<: *S1, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/select.png"}
+  - {name: PT站点, <<: *S3, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/pt.png"}
+  - {name: AI, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/ai.png"}
+  - {name: YouTube, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/youtube.png"}
+  - {name: Docker, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/docker.png"}
+  - {name: Google, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/google.png"}
+  - {name: GitHub, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/github.png"}
+  - {name: Telegram, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/telegram.png"}
+  - {name: TikTok, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/douyin.png"}
+  - {name: NETFLIX, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/netflix.png"}
+  - {name: Wallet, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/wallet.png"}
+  - {name: Steam, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/steam.png"}
+  - {name: Microsoft, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/microsoft.png"}
+  - {name: OneDrive, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/onedrive.png"}
+  - {name: CloudFlare, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/circle/cloudflare.png"}
+  - {name: Apple, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/apple.png"}
   #未收录的国外域名的UDP出站需要本地fallback的DNS去查询，fallback查询使用默认代理查询，最终会返回默认代理节点地址查询的CDN，如果漏网之鱼结果和DNS解析使用的不一致，会造成CDN不匹配问题。所以保持和DNS查询使用的节点一致
-  - {name: 广告, <<: *S7, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/circle/ad.png"}
-  - {name: 漏网之鱼, <<: *G1, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/final.png"}  
+  - {name: 广告, <<: *S4, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/circle/ad.png"}
+  - {name: 漏网之鱼, <<: *S2, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/final.png"}   
   #节点组
   
-  - {name: 自建手动, <<: *SD, filter: *PR, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/black/circle/home_broadband.png"}
-  - {name: 香港手动, <<: *SD, filter: *HK, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/hongkong.png"}
-  - {name: 日本手动, <<: *SD, filter: *JP, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/japan.png"}
-  - {name: 台湾手动, <<: *SD, filter: *TW, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/taiwan.png"}
-  - {name: 狮城手动, <<: *SD, filter: *SG, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/singapore.png"}
-  - {name: 美国手动, <<: *SD, filter: *US, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/usa.png"}
+  - {name: 自建手动, <<: *SD, filter: *PR, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/private.png"}
+  - {name: 香港手动, <<: *SD, filter: *HK, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/hongkong.png"}
+  - {name: 日本手动, <<: *SD, filter: *JP, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/japan.png"}
+  - {name: 台湾手动, <<: *SD, filter: *TW, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/taiwan.png"}
+  - {name: 狮城手动, <<: *SD, filter: *SG, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/singapore.png"}
+  - {name: 美国手动, <<: *SD, filter: *US, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/flag/corner/usa.png"}
   - {name: 全部手动, <<: *SD, filter: *Exclude, icon: *All}
   - {name: 香港故转, <<: *FB, filter: *HK, icon: *Failover}
   - {name: 日本故转, <<: *FB, filter: *JP, icon: *Failover}
@@ -210,7 +210,7 @@ proxy-groups:
   - {name: 全部自动, <<: *URL, filter: *Exclude, icon: *Auto}
   - {name: 自建自动, <<: *URL, filter: *PR, icon: *Auto}
   - {name: 延迟辅助, <<: *S5, icon: *Auto}
-  - {name: GLOBAL, <<: *G1, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/all.png"}
+  - {name: GLOBAL, <<: *S1, icon: "https://raw.githubusercontent.com/elevenx5566/rules/refs/heads/main/icons/mihomo/pure/corner/all.png"}
 
   
 rules:
